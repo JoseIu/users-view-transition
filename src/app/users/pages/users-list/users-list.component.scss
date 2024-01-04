@@ -1,0 +1,65 @@
+.users {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    gap: 2em;
+  }
+}
+
+.user {
+  border-radius: 0.3em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &__img {
+    border-radius: 0.3em;
+  }
+  &__info {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4em;
+  }
+  &__name {
+  }
+  &__role {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+}
+.user:hover {
+  padding: 0.5em;
+  outline: 0.0625rem solid #222;
+}
+.teacher,
+.student,
+.other {
+  color: #ffffffbd;
+  font-size: 0.8rem;
+  padding: 0.3em 0.8em;
+  border-radius: 0.3em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teacher {
+  background-color: lightpink;
+}
+.student {
+  background-color: lightsalmon;
+}
+
+.other {
+  background-color: lightslategrey;
+}

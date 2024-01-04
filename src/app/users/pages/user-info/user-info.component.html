@@ -1,0 +1,22 @@
+<section class="user-info wrapper">
+  <h2
+    class="user-info__title"
+    [style]="{ 'view-transition-name': 'user-' + user()?.name }"
+  >
+    User {{ user()?.name }}
+  </h2>
+
+  <div class="user">
+    <div class="user__info">
+      <h3>Name:{{ user()?.name }}</h3>
+      <h4>Role:{{ user()?.role }}</h4>
+      <h4>Active: {{ user()?.active }}</h4>
+    </div>
+    <img
+      class="user__img"
+      [srcset]="user()?.img"
+      [alt]="user()?.name"
+      [style]="{ 'view-transition-name': 'user-' + user()?.id }"
+    />
+  </div>
+</section>

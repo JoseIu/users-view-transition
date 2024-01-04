@@ -1,0 +1,28 @@
+<section class="users wrapper">
+  <h2 class="users__title">Users List</h2>
+  <div class="users__list">
+    @for (user of usersList ; track user.id) {
+
+    <article class="user" [routerLink]="['/user', user.id]">
+      <img
+        class="user__img"
+        [srcset]="user.img"
+        [alt]="user.name"
+        [style]="{ 'view-transition-name': 'user-' + user.id }"
+      />
+      <div class="user__info">
+        <h3
+          class="user__name"
+          [style]="{ 'view-transition-name': 'user-' + user.name }"
+        >
+          Name: <span>{{ user.name }}</span>
+        </h3>
+
+        <h4 class="user__role">
+          Role: <span [ngClass]="user.role"> {{ user.role }} </span>
+        </h4>
+      </div>
+    </article>
+    }
+  </div>
+</section>
